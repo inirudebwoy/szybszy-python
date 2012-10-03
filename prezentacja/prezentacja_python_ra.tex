@@ -1,0 +1,130 @@
+\documentclass{beamer}
+\usetheme{Bergen}
+\usecolortheme{beaver}
+\beamertemplatenavigationsymbolsempty
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage[normalem]{ulem}
+\begin{document}
+\center
+
+\begin{frame}
+\begin{itemize}
+\pause \item Michał Klich
+\pause \item pytho\~nista % to taki programista tylko, że inny
+\pause \item PMX
+\pause \item prawie Python
+\pause \item Emacs % vimiarze o słabych żołądkach mogą wyjść
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\only<1>{Czy Python może być szybki?}
+\only<2>{\sout{Czy} Python może być szybki \sout{?}!}
+% Wiem co sobie myśli większość z Was
+\only<3>{\includegraphics{skeptical_black_kid.jpg}}
+\only<4>{Czy Python może być szybszy?}
+\end{frame}
+
+\begin{frame}
+Narzędzia do analizy kodu
+\begin{itemize}
+\item dis % krótki przykład, powiedzieć skąd się biorą instrukcje
+\item cProfile % przykład i omówienie
+\item runsnake % pokazać
+\item kernprof % przykład i omówienie
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+dis \\
+Moduł tłumaczący kod CPython na bytecode. \\
+http://docs.python.org/library/dis.html
+% dis/dis_1.py i dis/dis_2.py
+\end{frame}
+
+\begin{frame}
+cProfile \\
+Moduł profilera dla CPythona \\
+http://docs.python.org/library/profile.html
+% primitive calls, not by recursion
+% python -m cProfile -o cprofile_1.prof cprofile_1.py
+% p = pstats.Stats('cprofile_1.prof')
+% p.sort_stats('cumulative').print_stats(10)
+% python -m cProfile -o fibonacci_matrix.prof fibonacci_matrix.py
+% p = pstats.Stats('fibonacci_matrix.prof')
+% p.sort_stats('cumulative').print_stats(10)
+\end{frame}
+
+\begin{frame}
+runsnake \\
+Graficzne narzędzie do przeglądania wyników profilera \\
+http://www.vrplumber.com/programming/runsnakerun/ \\
+\end{frame}
+
+\begin{frame}
+kernprof \\
+Zewnętrzny moduł profilera \\
+http://packages.python.org/line\_profiler/
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item CPython % pełny wypas
+\item Cython % pełny wypas
+\item PyPy % tylko przykład, w zasadzie ten sam kod będzie działał
+\only<1>{
+\item ShedSkin
+\item multiprocessing
+\item ParallelPython
+\item pyCUDA}
+\only<2>{
+\item \sout{ShedSkin}
+\item \sout{multiprocessing}
+\item \sout{ParallelPython}
+\item \sout{pyCUDA}
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+CPython \\
+http://www.python.org/ \\
+\end{frame}
+
+\begin{frame}
+Cython \\
+http://cython.org/ \\
+\end{frame}
+
+\begin{frame}
+PyPy \\
+http://pypy.org/ \\
+\end{frame}
+
+\begin{frame}
+ShedSkin \\
+https://gitorious.org/shedskin \\
+\end{frame}
+
+\begin{frame}
+multiprocessing \\
+http://docs.python.org/library/multiprocessing.html \\
+\end{frame}
+
+\begin{frame}
+ParallelPython \\
+http://www.parallelpython.com/ \\
+\end{frame}
+
+\begin{frame}
+pyCUDA \\
+https://github.com/inducer/pycuda \\
+\end{frame}
+
+\begin{frame}
+\includegraphics[scale=0.5]{cookie_monster.jpg} \\
+Koniec
+\end{frame}
+
+\end{document}
